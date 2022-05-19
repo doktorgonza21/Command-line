@@ -30,13 +30,13 @@ http://162.55.220.72:5005/terminal-hw-request - **curl -I http://162.55.220.72:5
 
 **##Тело файла**
 
-#!/bin/bash
-echo "Start"
-cd c:/4/3
-mkdir 9 8 7
-cd c:/4/3/9
-touch 1.txt 2.txt 3.txt 1.json 2.json
-mkdir 1 2 3
-ls -1
-mv 1.txt 2.json c:/4/3/7
-echo "End"
+    #!/bin/bash
+    echo "Start"
+    cd c:/4/3
+    mkdir 9 8 7
+    cd c:/4/3/9
+    touch 1.txt 2.txt 3.txt 1.json 2.json
+    mkdir 1 2 3
+    ls -1
+    mv 1.txt 2.json c:/4/3/7
+    echo "End"
