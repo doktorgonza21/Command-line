@@ -1,42 +1,178 @@
-1) Посмотреть где я - pwd
-2) Создать папку - mkdir foldername
-3) Зайти в папку - cd foldername
-4) Создать 3 папки - mkdir 1 2 3
-5) Зайти в любоую папку - cd foldername/foldername/foldername
-6) Создать 5 файлов (3 txt, 2 json) - touch 1.txt 2.txt 3.txt 1.json 2.json
-7) Создать 3 папки  - mkdir 1 2 3
-8. Вывести список содержимого папки - ls или dir
-9) + Открыть любой txt файл - start *.txt (Открывает в GUI редакторе по умолчанию), nano *.txt (открывает во встроенном редакторе)
-10) + написать туда что-нибудь, любой текст. - echo "Любой текст" > 1.txt или nano 1.txt (Пишем любой текст, далее нажимаем ctrl+s (сохранение файла), затем ctrl+x (выход из оболочки nano))
-11) + сохранить и выйти. - ctrl+s ctrl+x
-12) Выйти из папки на уровень выше - cd ..
-—
-13) переместить любые 2 файла, которые вы создали, в любую другую папку. - mv 1.txt 2.txt foldername/
-14) скопировать любые 2 файла, которые вы создали, в любую другую папку. - cp 1.txt 2.txt foldername/
-15) Найти файл по имени - find /path/to/folder/ -name filename или ls path/to/folder | grep filename
-16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. - grep 'что ищем' где ищем
-17) вывести несколько первых строк из текстового файла - head -n2 filename.txt
-18) вывести несколько последних строк из текстового файла - tail -n3 filename.txt
-19) просмотреть содержимое длинного файла (команда less) изучите как она работает. - less filename.txt
-20) вывести дату и время - date
+1) Посмотреть где я 
 
+command: pwd
 
-1) Отправить http запрос на сервер.
-http://162.55.220.72:5005/terminal-hw-request - curl -I http://162.55.220.72:5005/terminal-hw-request
+result: /c
+
+2) Создать папку 
+
+command: mkdir 5
+
+result: folder 5 created
+
+3) Зайти в папку
+
+command: cd 5
+
+result: /c/5
+
+4) Создать 3 папки 
+
+command: mkdir 1 2 3
+
+result: folders 1, 2, 3 created
+
+5) Зайти в любоую папку 
+
+command: cd 1
+
+result: /c/5/1
+
+6) Создать 5 файлов (3 txt, 2 json)
+
+command: touch 1.txt 2.txt 3.txt 1.json 2.json
+
+result: 5 files created in folder 1/
+
+7) Создать 3 папки 
+
+command: mkdir 1 2 3
+
+result: folders 1, 2, 3 created
+
+8) Вывести список содержимого папки - ls или dir
+
+command: ls or dir (we can use some option for ls: ls -a, ls -al etc., but I prefer ls -1 if I don't need to see hiden files and rights)
+
+result: 1/
+	1.json
+	1.txt
+	2/
+	2.json
+	2.txt
+	3/
+	3.txt
+
+9) Открыть любой txt файл
+
+command: nano 1.txt (if we want to open file in default shell editor) 
+	 start 1.txt (if we want to open file in gui editor)
+
+result: editor opened
+
+10) написать туда что-нибудь, любой текст
+
+command: First line
+	 Second line
+	 Third line
+
+result:  First line
+	 Second line
+	 Third line
+
+11) сохранить и выйти
+
+command: ctrl+s ctrl+x
+
+result: file saved and we returned to command line
+
+12) Выйти из папки на уровень выше
+
+command: cd ..
+
+result: /c/5
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку 
+
+command: mv 1/1.txt 1/1.json 3/
+ 
+result: files 1.txt and 1.json moved from folder 1/ to folder 3/
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку
+
+command: cp 1/2.txt 1/2.json 3/
+
+result: files 2.txt and 2.json copied from folder 1/ to folder 3/
+
+15) Найти файл по имени
+
+command: find C:/5/ -name 1.txt
+
+result: C:/5/3/1.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает
+
+command: head -5 C:/4/3/5.txt | grep "team"
+
+result: it shows first 5 string where are a "team" word
+
+17) вывести несколько первых строк из текстового файла
+command: head -2 3/1.txt
+
+result: First line
+	Second line
+
+18) вывести несколько последних строк из текстового файла
+
+command: tail -2 3/1.txt
+
+result: Seventh line
+	Last line
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает 
+
+command: less filename.txt
+
+result: it shows any file with some pages
+
+20) вывести дату и время
+
+command: date
+
+result: it is showing date
+
+1)* Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request
+
+Command1: curl -I http://162.55.220.72:5005/terminal-hw-request
+
+Result1: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   283  100   283    0     0   3432      0 --:--:-- --:--:-- --:--:--  3451{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+
+Command2: curl -s "http://162.55.220.72:5005/get_method?name=Max&age=35"
+
+Result2:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    29  100    29    0     0    339      0 --:--:-- --:--:-- --:--:--   341[
+  "DoktorGonza",
+  "35"
+]
+
 
 2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
 
-Создаем файл с расширением .sh
+Create file .sh: touch 6.sh
+Open file: nano 6.sh
+For run file we use command: sh 6.sh
 
-##Тело файла
+##File body
 
 #!/bin/bash
 echo "Start"
-cd c:/4/3
+cd c:/5/3
 mkdir 9 8 7
-cd c:/4/3/9
+cd c:/5/3/9
 touch 1.txt 2.txt 3.txt 1.json 2.json
 mkdir 1 2 3
 ls -1
-mv 1.txt 2.json c:/4/3/7
+mv 1.txt 2.json c:/5/3/7
 echo "End"
