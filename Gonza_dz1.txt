@@ -133,7 +133,7 @@ result: it is showing date
 
 1)* Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request
 
-Command1: curl -I http://162.55.220.72:5005/terminal-hw-request
+Command1: curl http://162.55.220.72:5005/terminal-hw-request
 
 Result1: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
@@ -148,14 +148,14 @@ Result1: % Total    % Received % Xferd  Average Speed   Time    Time     Time  C
   }
 }
 
-Command2: curl -s "http://162.55.220.72:5005/get_method?name=Max&age=35"
+Command2: curl -s http://162.55.220.72:5005/get_method?name=Max\&\age=35
 
-Result2:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100    29  100    29    0     0    339      0 --:--:-- --:--:-- --:--:--   341[
-  "DoktorGonza",
-  "35"
-]
+
+Result2: [
+  	 "Max",
+  	 "35"
+	 ]
+
 
 
 2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
